@@ -1,0 +1,1 @@
+# Unweird — premium demo\n\nEvidence-first detection (confidence band + heatmap + stability) and humanizing rewrites.\n\n## Local dev\n```bash\nnpm i\nnpm run dev\n```\n

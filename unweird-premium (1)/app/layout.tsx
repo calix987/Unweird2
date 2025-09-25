@@ -1,0 +1,7 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import './globals.css'
+export const metadata:Metadata={title:'Unweird — Make AI read like you.',description:'Evidence-first detection and humanizing rewrites.'}
+export default function RootLayout({children}:{children:React.ReactNode}){
+  return(<html lang="en"><body className="min-h-dvh bg-white text-slate-900 antialiased"><header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/80 backdrop-blur"><div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4"><Link href="/" className="flex items-center gap-2"><img src="/brand/unweird-wordmark.svg" alt="Unweird" className="h-6 w-auto"/></Link><nav className="hidden items-center gap-6 text-sm sm:flex"><Link href="/write" className="hover:text-slate-700">Write</Link><Link href="/images" className="hover:text-slate-700">Images</Link><Link href="/pricing" className="hover:text-slate-700">Pricing</Link><Link href="/privacy" className="hover:text-slate-700">Privacy</Link><Link href="/auth/signin" className="rounded-md border border-slate-300 px-3 py-1.5 text-slate-700 hover:bg-slate-50">Sign in</Link><Link href="/get-started" className="rounded-md bg-slate-900 px-3 py-1.5 font-medium text-white hover:bg-slate-800">Get started</Link></nav></div></header><main className="min-h-[calc(100dvh-56px)]">{children}</main><footer className="border-t border-slate-200/60 py-10 text-center text-sm text-slate-500">© {new Date().getFullYear()} Unweird — Make AI read like you.</footer></body></html>)
+}

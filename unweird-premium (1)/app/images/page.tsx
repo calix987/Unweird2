@@ -1,0 +1,3 @@
+'use client'
+import { useState } from 'react'
+export default function ImagesPage(){const [fileName,setFileName]=useState<string|null>(null);return(<section className="mx-auto max-w-4xl px-4 py-10"><h1 className="mb-4 text-2xl font-semibold">Images</h1><div className="rounded-2xl border border-dashed border-slate-300 p-10 text-center"><p className="mb-3 text-slate-600">Drag & drop an image or choose a file</p><input type="file" accept="image/*" onChange={e=>setFileName(e.target.files?.[0]?.name??null)}/>{fileName&&<p className="mt-3 text-sm text-slate-500">Selected: {fileName}</p>}</div></section>) }
