@@ -1,0 +1,1 @@
+declare module "diff" { export function diffWords(a:string,b:string): any; }
